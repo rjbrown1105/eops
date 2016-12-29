@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55BA70BA-35C6-4765-9521-B5F34233B8A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EvfaEOC</RootNamespace>
+    <AssemblyName>EvfaEOC</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventTeams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventTeams.Designer.cs">
+      <DependentUpon>EventTeams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EvOps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvOps.Designer.cs">
+      <DependentUpon>EvOps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EvSrch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvSrch.Designer.cs">
+      <DependentUpon>EvSrch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobsView.Designer.cs">
+      <DependentUpon>JobsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="m_Event.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="m_Event.Designer.cs">
+      <DependentUpon>m_Event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prf.Designer.cs">
+      <DependentUpon>Prf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\DataSources\dsref.cs">
+      <DependentUpon>dsref.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\dsref.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsref.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\evfads.cs">
+      <DependentUpon>evfads.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\evfads.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evfads.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rota.Designer.cs">
+      <DependentUpon>Rota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RotaDay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RotaDay.Designer.cs">
+      <DependentUpon>RotaDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\evfasr\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Shift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Shift.Designer.cs">
+      <DependentUpon>Shift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Srch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Srch.Designer.cs">
+      <DependentUpon>Srch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\evfawr\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EventTeams.resx">
+      <DependentUpon>EventTeams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvOps.resx">
+      <DependentUpon>EvOps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvSrch.resx">
+      <DependentUpon>EvSrch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobsView.resx">
+      <DependentUpon>JobsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="m_Event.resx">
+      <DependentUpon>m_Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prf.resx">
+      <DependentUpon>Prf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Rota.resx">
+      <DependentUpon>Rota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RotaDay.resx">
+      <DependentUpon>RotaDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shift.resx">
+      <DependentUpon>Shift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Srch.resx">
+      <DependentUpon>Srch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\dsref.xsc">
+      <DependentUpon>dsref.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsref.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsref.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\dsref.xss">
+      <DependentUpon>dsref.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\evfads.xsc">
+      <DependentUpon>evfads.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\evfads.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evfads.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\evfads.xss">
+      <DependentUpon>evfads.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\evfasr\evfawsa.wsdl" />
+    <None Include="Web References\evfawr\evfawsa.wsdl" />
+    <None Include="Web References\evfawr\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\livesEVENTS.png" />
+    <None Include="Web References\evfawr\evfawsa.disco" />
+    <None Include="Service References\evfasr\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\evfasr\configuration.svcinfo" />
+    <None Include="Service References\evfasr\configuration91.svcinfo" />
+    <None Include="Service References\evfasr\evfawsa.disco" />
+    <None Include="Resources\X%27s.png" />
+    <None Include="Resources\Save_FloppyDisk.png" />
+    <None Include="Resources\New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventCommon\EventCommon.csproj">
+      <Project>{1da8d71a-f1f7-46d7-b0a4-b9819a0e7c68}</Project>
+      <Name>EventCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\evfasr\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:54334/evfawsa.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\evfawr\</RelPath>
+      <UpdateFromURL>http://localhost:54334/evfawsa.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EvfaEOC_evfawr_evfawsa</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

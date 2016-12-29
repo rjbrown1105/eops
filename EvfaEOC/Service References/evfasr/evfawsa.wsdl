@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchEvents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partial" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sd" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ed" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="incdel" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchEventsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEventJobs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="JobStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEventJobsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEventJobsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEventCodeName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEventCodeNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEventCodeNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTeamRota">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTeamRotaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTeamRotaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEventStartDateTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEventStartDateTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEventStartDateTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getJobData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="JobID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getJobDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getJobDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="savePrf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="prfid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="savePrfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="savePrfResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPrfData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="JobID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrfID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPrfDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPrfDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getnextJobID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TeamID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AuditID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getnextJobIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getnextJobIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchEvents" />
+  </wsdl:message>
+  <wsdl:message name="SearchEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEventJobsSoapIn">
+    <wsdl:part name="parameters" element="tns:getEventJobs" />
+  </wsdl:message>
+  <wsdl:message name="getEventJobsSoapOut">
+    <wsdl:part name="parameters" element="tns:getEventJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEventCodeNameSoapIn">
+    <wsdl:part name="parameters" element="tns:getEventCodeName" />
+  </wsdl:message>
+  <wsdl:message name="getEventCodeNameSoapOut">
+    <wsdl:part name="parameters" element="tns:getEventCodeNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTeamRotaSoapIn">
+    <wsdl:part name="parameters" element="tns:getTeamRota" />
+  </wsdl:message>
+  <wsdl:message name="getTeamRotaSoapOut">
+    <wsdl:part name="parameters" element="tns:getTeamRotaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEventStartDateTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:getEventStartDateTime" />
+  </wsdl:message>
+  <wsdl:message name="getEventStartDateTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:getEventStartDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getJobDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getJobData" />
+  </wsdl:message>
+  <wsdl:message name="getJobDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getJobDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="savePrfSoapIn">
+    <wsdl:part name="parameters" element="tns:savePrf" />
+  </wsdl:message>
+  <wsdl:message name="savePrfSoapOut">
+    <wsdl:part name="parameters" element="tns:savePrfResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPrfDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getPrfData" />
+  </wsdl:message>
+  <wsdl:message name="getPrfDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getPrfDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getnextJobIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getnextJobID" />
+  </wsdl:message>
+  <wsdl:message name="getnextJobIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getnextJobIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="evfawsaSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchEvents">
+      <wsdl:input message="tns:SearchEventsSoapIn" />
+      <wsdl:output message="tns:SearchEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEventJobs">
+      <wsdl:input message="tns:getEventJobsSoapIn" />
+      <wsdl:output message="tns:getEventJobsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEventCodeName">
+      <wsdl:input message="tns:getEventCodeNameSoapIn" />
+      <wsdl:output message="tns:getEventCodeNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTeamRota">
+      <wsdl:input message="tns:getTeamRotaSoapIn" />
+      <wsdl:output message="tns:getTeamRotaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEventStartDateTime">
+      <wsdl:input message="tns:getEventStartDateTimeSoapIn" />
+      <wsdl:output message="tns:getEventStartDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getJobData">
+      <wsdl:input message="tns:getJobDataSoapIn" />
+      <wsdl:output message="tns:getJobDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="savePrf">
+      <wsdl:input message="tns:savePrfSoapIn" />
+      <wsdl:output message="tns:savePrfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPrfData">
+      <wsdl:input message="tns:getPrfDataSoapIn" />
+      <wsdl:output message="tns:getPrfDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getnextJobID">
+      <wsdl:input message="tns:getnextJobIDSoapIn" />
+      <wsdl:output message="tns:getnextJobIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="evfawsaSoap" type="tns:evfawsaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEvents">
+      <soap:operation soapAction="http://tempuri.org/SearchEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventJobs">
+      <soap:operation soapAction="http://tempuri.org/getEventJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventCodeName">
+      <soap:operation soapAction="http://tempuri.org/getEventCodeName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTeamRota">
+      <soap:operation soapAction="http://tempuri.org/getTeamRota" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventStartDateTime">
+      <soap:operation soapAction="http://tempuri.org/getEventStartDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getJobData">
+      <soap:operation soapAction="http://tempuri.org/getJobData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="savePrf">
+      <soap:operation soapAction="http://tempuri.org/savePrf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrfData">
+      <soap:operation soapAction="http://tempuri.org/getPrfData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getnextJobID">
+      <soap:operation soapAction="http://tempuri.org/getnextJobID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="evfawsaSoap12" type="tns:evfawsaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEvents">
+      <soap12:operation soapAction="http://tempuri.org/SearchEvents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventJobs">
+      <soap12:operation soapAction="http://tempuri.org/getEventJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventCodeName">
+      <soap12:operation soapAction="http://tempuri.org/getEventCodeName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTeamRota">
+      <soap12:operation soapAction="http://tempuri.org/getTeamRota" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventStartDateTime">
+      <soap12:operation soapAction="http://tempuri.org/getEventStartDateTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getJobData">
+      <soap12:operation soapAction="http://tempuri.org/getJobData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="savePrf">
+      <soap12:operation soapAction="http://tempuri.org/savePrf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrfData">
+      <soap12:operation soapAction="http://tempuri.org/getPrfData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getnextJobID">
+      <soap12:operation soapAction="http://tempuri.org/getnextJobID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="evfawsa">
+    <wsdl:port name="evfawsaSoap" binding="tns:evfawsaSoap">
+      <soap:address location="http://localhost:54334/evfawsa.asmx" />
+    </wsdl:port>
+    <wsdl:port name="evfawsaSoap12" binding="tns:evfawsaSoap12">
+      <soap12:address location="http://localhost:54334/evfawsa.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+  <string name="AddLJob">Add new Local Job</string>
+  <string name="AcceptJob">Accept Job</string>
+    <string name="ApplicationName">evfa</string>
+  <string name="JobDets">Job Details</string>
+  <string name="JobRef">Job Ref</string>
+</resources>
