@@ -59,4 +59,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/AddLJob" />
+    <ImageView
+        android:src="@drawable/eopshome"
+        android:layout_width="375.5dp"
+        android:layout_height="153.5dp"
+        android:id="@+id/imageView1" />
 </LinearLayout>

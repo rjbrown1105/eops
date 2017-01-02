@@ -45,10 +45,13 @@ namespace evfa
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int eopshome = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int livesEVENTS = 2130837505;
+			public const int Icon = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int livesEVENTS = 2130837506;
 			
 			static Drawable()
 			{
@@ -78,20 +81,38 @@ namespace evfa
 			// aapt resource value: 0x7f050017
 			public const int button1 = 2131034135;
 			
+			// aapt resource value: 0x7f05001b
+			public const int ctvTitle = 2131034139;
+			
 			// aapt resource value: 0x7f05000e
 			public const int fragmentContainer = 2131034126;
 			
 			// aapt resource value: 0x7f050001
 			public const int gridLayout1 = 2131034113;
 			
+			// aapt resource value: 0x7f05001a
+			public const int imageView1 = 2131034138;
+			
 			// aapt resource value: 0x7f050013
 			public const int lblJobAlloc = 2131034131;
+			
+			// aapt resource value: 0x7f05001c
+			public const int rbTitleMr = 2131034140;
+			
+			// aapt resource value: 0x7f05001d
+			public const int rbTitleMrs = 2131034141;
+			
+			// aapt resource value: 0x7f05001e
+			public const int rbTitleMs = 2131034142;
+			
+			// aapt resource value: 0x7f05001f
+			public const int rbTitleOther = 2131034143;
 			
 			// aapt resource value: 0x7f050002
 			public const int sampleTextView = 2131034114;
 			
 			// aapt resource value: 0x7f050000
-			public const int tabHost1 = 2131034112;
+			public const int tabHost2 = 2131034112;
 			
 			// aapt resource value: 0x7f05000f
 			public const int tableLayout1 = 2131034127;
@@ -117,8 +138,8 @@ namespace evfa
 			// aapt resource value: 0x7f050015
 			public const int tableRow6 = 2131034133;
 			
-			// aapt resource value: 0x7f05001b
-			public const int txtAdd1 = 2131034139;
+			// aapt resource value: 0x7f050021
+			public const int txtAdd1 = 2131034145;
 			
 			// aapt resource value: 0x7f050009
 			public const int txtCategory = 2131034121;
@@ -144,29 +165,29 @@ namespace evfa
 			// aapt resource value: 0x7f050006
 			public const int txtTeam = 2131034118;
 			
-			// aapt resource value: 0x7f05001c
-			public const int txtptAdd2 = 2131034140;
-			
-			// aapt resource value: 0x7f05001d
-			public const int txtptAdd3 = 2131034141;
-			
-			// aapt resource value: 0x7f05001e
-			public const int txtptAdd4 = 2131034142;
-			
-			// aapt resource value: 0x7f050021
-			public const int txtptAge = 2131034145;
-			
 			// aapt resource value: 0x7f050022
-			public const int txtptDOB = 2131034146;
+			public const int txtptAdd2 = 2131034146;
 			
-			// aapt resource value: 0x7f05001a
-			public const int txtptName = 2131034138;
+			// aapt resource value: 0x7f050023
+			public const int txtptAdd3 = 2131034147;
 			
-			// aapt resource value: 0x7f05001f
-			public const int txtptPCode = 2131034143;
+			// aapt resource value: 0x7f050024
+			public const int txtptAdd4 = 2131034148;
+			
+			// aapt resource value: 0x7f050027
+			public const int txtptAge = 2131034151;
+			
+			// aapt resource value: 0x7f050028
+			public const int txtptDOB = 2131034152;
 			
 			// aapt resource value: 0x7f050020
-			public const int txtptTelno = 2131034144;
+			public const int txtptName = 2131034144;
+			
+			// aapt resource value: 0x7f050025
+			public const int txtptPCode = 2131034149;
+			
+			// aapt resource value: 0x7f050026
+			public const int txtptTelno = 2131034150;
 			
 			static Id()
 			{
