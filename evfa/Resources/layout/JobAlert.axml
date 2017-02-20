@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:background="@android:color/holo_red_light">
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout1">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+        <!--  <TextView
+                android:text="Job Alert"
+                android:layout_column="1"
+                android:id="@+id/textView9"
+                android:textSize="20pt"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_span="1" /> -->
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2">
+            <TextView
+                android:text="Location"
+                android:layout_column="0"
+                android:id="@+id/lblLoc"
+                android:textSize="14pt"
+                android:textColor="@android:color/white"
+                android:layout_gravity="right"
+                android:layout_marginRight="5px" />
+            <TextView
+                android:text="Stixwold Rd R/A"
+                android:layout_column="1"
+                android:id="@+id/txtLoc"
+                android:textSize="14pt"
+                android:ems="8"
+                android:textColor="@android:color/white"
+                android:layout_gravity="left"
+                android:layout_span="1" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3">
+            <TextView
+                android:text="Priority"
+                android:layout_column="0"
+                android:id="@+id/lblPriority"
+                android:textSize="14pt"
+                android:textColor="@android:color/white"
+                android:layout_gravity="right"
+                android:layout_marginRight="5px" />
+            <TextView
+                android:text="Amber 1"
+                android:layout_column="1"
+                android:id="@+id/txtPriority"
+                android:textSize="14pt"
+                android:textColor="@android:color/white"
+                android:layout_gravity="left"
+                android:layout_span="2" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4">  
+            <TextView
+                android:text="Time"
+                android:layout_column="0"
+                android:id="@+id/lblJobTime"
+                android:textSize="14pt"
+                android:textColor="@android:color/white"
+                android:layout_gravity="right"
+                android:layout_marginRight="5px" />
+            <TextView
+                android:text="14:28"
+                android:layout_column="1"
+                android:id="@+id/txtJobTime"
+                android:textSize="14pt"
+                android:textColor="@android:color/white"
+                android:layout_gravity="left"
+                android:layout_span="2" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow5">
+            <TextView
+                android:text="Desc"
+                android:layout_column="0"
+                android:id="@+id/lblDesc"
+                android:textSize="14pt"
+                android:textColor="@android:color/white"
+                android:layout_gravity="right"
+                android:layout_marginRight="5px" />
+            <TextView
+                android:text="RTC Car v Ped"
+                android:layout_column="1"
+                android:id="@+id/txtDesc"
+                android:textSize="14pt"
+                android:textColor="@android:color/white"
+                android:layout_gravity="left"
+                android:layout_span="2" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

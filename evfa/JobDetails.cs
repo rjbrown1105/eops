@@ -47,13 +47,9 @@ namespace evfa
             }
             base.OnCreate(bundle);
 
-
-
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.JobDetails);
-            //      o1t = new OBS1Tab();
-            //      o2t = new OBS1Tab();
-            //Obs1Complete = o1t.completed;
+            SetContentView(Resource.Layout.jdTab);
+
             this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
             this.ActionBar.SetIcon(Resource.Drawable.Icon);
             //this.ActionBar.

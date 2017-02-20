@@ -9,46 +9,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tableLayout1">
+    <!--android:background="@drawable/livesevents"-->
         <TableRow
             android:id="@+id/tableRow1"
-            android:background="@drawable/livesevents"
-            android:layout_height="160.0dp"
-            android:layout_width="369.5dp"
+            android:background="@drawable/eops250"
+            android:layout_height="320.0px"
+            android:layout_width="320px"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp">
-            <TableLayout
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_column="2"
-                android:id="@+id/tableLayout2"
-                android:background="@android:color/black"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TableRow
-                    android:id="@+id/tableRow4">
-                    <TextView
-                        android:text="Job Allocation"
-                        android:layout_column="1"
-                        android:id="@+id/lblJobAlloc"
-                        android:textColor="@android:color/white"
-                        android:layout_gravity="center_horizontal" />
-                </TableRow>
-                <TableRow
-                    android:id="@+id/tableRow5">
-                </TableRow>
-                <TableRow
-                    android:id="@+id/tableRow6">
-                </TableRow>
-            </TableLayout>
         </TableRow>
         <TableRow
             android:id="@+id/tableRow2">
-            <Button
-                android:text="@string/AcceptJob"
-                android:layout_column="2"
-                android:id="@+id/button1"
-                android:layout_width="309.5dp"
-                android:textStyle="normal" />
         </TableRow>
         <TableRow
             android:id="@+id/tableRow3">
@@ -63,5 +34,17 @@
         android:src="@drawable/eopshome"
         android:layout_width="375.5dp"
         android:layout_height="153.5dp"
-        android:id="@+id/imageView1" />
+        android:id="@+id/imgmain" />
+    <TextView
+        android:id="@+id/lblCallsign"
+        android:text="Callsign : " />
+    <TextView
+        android:id="@+id/txtCallsign"
+        android:text="RA051" />
+    <TextView
+        android:id="@+id/lblGroup"
+        android:text="Group : " />
+    <TextView
+        android:id="@+id/txtGroup"
+        android:text="Mob2" />
 </LinearLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <GridLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridLayout1"
+        android:rowCount="16"
+        android:columnCount="5">
+        <TextView
+            android:text=" "
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_gravity="right" />
+        <TextView
+            android:id="@+id/sampleTextView"
+            android:text="Observations"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:layout_columnSpan="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/ctvavpu"
+            android:layout_column="2"
+            android:layout_columnSpan="3"
+            android:layout_row="1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/ctvavpu">
+            <RadioButton
+                android:id="@+id/rbAVPUA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/rbAVPUV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V" />
+            <RadioButton
+                android:id="@+id/rbAVPUP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P" />
+            <RadioButton
+                android:id="@+id/rbAVPUU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="U" />
+        </RadioGroup>
+        <TextView
+            android:text="RESPS"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:layout_gravity="right" />
+        <EditText
+            android:id="@+id/txtResp"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:ems="3"
+            android:maxLength="3"
+            android:numeric="integer"
+            android:inputType="number"
+            android:scrollbars="none"
+            android:textStyle="bold" />
+        <TextView
+            android:text="PULSE"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_gravity="left" />
+        <EditText
+            android:id="@+id/txtPulse"
+            android:layout_column="4"
+            android:layout_row="2"
+            android:layout_gravity="left"
+            android:ems="3"
+            android:numeric="integer"
+            android:inputType="number"
+            android:textStyle="bold" />
+        <TextView
+            android:text="O2SATS"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:layout_gravity="right" />
+        <EditText
+            android:id="@+id/txtO2sats"
+            android:layout_column="2"
+            android:ems="3"
+            android:numeric="integer"
+            android:inputType="number"
+            android:textStyle="bold" />
+        <TextView
+            android:text="on o2?"
+            android:layout_column="3"
+            android:layout_gravity="left" />
+        <CheckBox
+            android:text=""
+            android:layout_column="4"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/chkonO2" />
+        <TextView
+            android:text="TEMP"
+            android:layout_column="1"
+            android:layout_gravity="right" />
+        <EditText
+            android:id="@+id/txtTemp"
+            android:layout_column="2"
+            android:layout_gravity="left"
+            android:maxLength="4"
+            android:ems="3"
+            android:numeric="decimal"
+            android:inputType="numberDecimal"
+            android:textStyle="bold" />
+        <TextView
+            android:text="BP"
+            android:layout_column="1"
+            android:layout_gravity="right" />
+        <EditText
+            android:id="@+id/txtBPSys"
+            android:ems="3"
+            android:layout_column="2"
+            android:numeric="integer"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textStyle="bold" />
+        <TextView
+            android:text="/"
+            android:layout_column="3"
+            android:layout_gravity="left" />
+        <EditText
+            android:id="@+id/txtBPDia"
+            android:ems="3"
+            android:layout_column="4"
+            android:layout_gravity="left"
+            android:inputType="number"
+            android:maxLength="3"
+            android:numeric="integer"
+            android:textStyle="bold" />
+        <TextView
+            android:text="CBG"
+            android:layout_column="1"
+            android:layout_gravity="right" />
+        <EditText
+            android:id="@+id/txtCBG"
+            android:ems="3"
+            android:numeric="decimal"
+            android:inputType="numberDecimal"
+            android:textStyle="bold" />
+        <TextView
+            android:text="Infection?"
+            android:layout_column="1"
+            android:layout_gravity="right" />
+        <CheckBox
+            android:text=""
+            android:layout_column="2"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkInf" />
+        <TextView
+            android:text="NEWS"
+            android:layout_column="1"
+            android:layout_row="10"
+            android:layout_gravity="right" />
+        <EditText
+            android:id="@+id/txtNews"
+            android:ems="3"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:enabled="true"
+            android:editable="false" />
+        <TextView
+            android:text="SEPSIS"
+            android:layout_column="3"
+            android:layout_row="10"
+            android:layout_gravity="right" />
+        <EditText
+            android:id="@+id/txtSepsis"
+            android:layout_column="4"
+            android:layout_gravity="left"
+            android:ems="3"
+            android:layout_columnSpan="1"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:enabled="true"
+            android:editable="false" />
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_column="1"
+            android:layout_row="11"
+            android:layout_rowSpan="2"
+            android:layout_columnSpan="1"
+            android:text="Save"
+            android:layout_gravity="left" />
+        <TextView
+            android:text="Time"
+            android:layout_column="2"
+            android:layout_row="11"
+            android:layout_gravity="right" />
+        <EditText
+            android:id="@+id/txtTime"
+            android:ems="5"
+            android:layout_columnSpan="2"
+            android:layout_column="3"
+            android:layout_gravity="left"
+            android:textStyle="normal"
+            android:enabled="true"
+            android:editable="false" />
+        <CheckBox
+            android:text="Completed"
+            android:layout_column="2"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkComplete"
+            android:editable="false"
+            android:layout_columnSpan="2" />
+        <MultiAutoCompleteTextView
+            android:layout_column="1"
+            android:layout_columnSpan="4"
+            android:id="@+id/txtError"
+            android:textColor="#ffff5252" />
+    </GridLayout>
+</ScrollView>
