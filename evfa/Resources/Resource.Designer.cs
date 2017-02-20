@@ -87,8 +87,8 @@ namespace evfa
 			// aapt resource value: 0x7f050003
 			public const int JobID = 2131034115;
 			
-			// aapt resource value: 0x7f05001a
-			public const int MyButton = 2131034138;
+			// aapt resource value: 0x7f05001e
+			public const int MyButton = 2131034142;
 			
 			// aapt resource value: 0x7f05000d
 			public const int btnNewPrf = 2131034125;
@@ -123,17 +123,17 @@ namespace evfa
 			// aapt resource value: 0x7f050001
 			public const int gridLayout1 = 2131034113;
 			
-			// aapt resource value: 0x7f05001b
-			public const int imgmain = 2131034139;
+			// aapt resource value: 0x7f05001f
+			public const int imgmain = 2131034143;
 			
-			// aapt resource value: 0x7f05001c
-			public const int lblCallsign = 2131034140;
+			// aapt resource value: 0x7f05001a
+			public const int lblCallsign = 2131034138;
 			
 			// aapt resource value: 0x7f050018
 			public const int lblDesc = 2131034136;
 			
-			// aapt resource value: 0x7f05001e
-			public const int lblGroup = 2131034142;
+			// aapt resource value: 0x7f05001c
+			public const int lblGroup = 2131034140;
 			
 			// aapt resource value: 0x7f050016
 			public const int lblJobTime = 2131034134;
@@ -213,8 +213,8 @@ namespace evfa
 			// aapt resource value: 0x7f05002c
 			public const int txtCBG = 2131034156;
 			
-			// aapt resource value: 0x7f05001d
-			public const int txtCallsign = 2131034141;
+			// aapt resource value: 0x7f05001b
+			public const int txtCallsign = 2131034139;
 			
 			// aapt resource value: 0x7f050009
 			public const int txtCategory = 2131034121;
@@ -228,8 +228,8 @@ namespace evfa
 			// aapt resource value: 0x7f050032
 			public const int txtError = 2131034162;
 			
-			// aapt resource value: 0x7f05001f
-			public const int txtGroup = 2131034143;
+			// aapt resource value: 0x7f05001d
+			public const int txtGroup = 2131034141;
 			
 			// aapt resource value: 0x7f050037
 			public const int txtHistory = 2131034167;

@@ -24,10 +24,7 @@ namespace evfa
             // and attach an event to it
             Button btnNormalDialog = FindViewById<Button>(Resource.Id.MyButton);
             btnNormalDialog.Click += methodInvokeBaseAlertDialog;
-           // Button button = FindViewById<Button>(Resource.Id.MyButton);
             ImageView imgctrl = FindViewById<ImageView>(Resource.Id.imgmain);
-            //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
-
             //  imgctrl.OnTouchEvent += OnTouchEvente();
         }
         public override bool OnTouchEvent(MotionEvent e)
@@ -44,7 +41,7 @@ namespace evfa
         }
         private void InitControl()
         {
-            //tvScreenSize = FindViewById<TextView>(Resource.Id.tvScreenSize);
+
         }
 
         void methodInvokeBaseAlertDialog(object sender, EventArgs e)
@@ -53,14 +50,11 @@ namespace evfa
             AlertDialog dlgAlert = (new AlertDialog.Builder(this)).Create();
             dlgAlert.SetTitle("Job Alert");
             
-            //dlgAlert.Window.SetFeatureDrawable(WindowFeatures.NoTitle,null);
-            //dlgAlert.RequestWindowFeature(Window.SetTitle(.FEATURE_NO_TITLE);
             WindowManagerLayoutParams wmlp = dlgAlert.Window.Attributes;
             wmlp.Gravity = GravityFlags.Top | GravityFlags.Left;
             wmlp.X = 100;   //x position
             wmlp.Y = 100;   //y position
-            //dlgAlert.Window.WindowManager.LayoutParams wmlp = dialog.getWindow().getAttributes();
-
+            
             var viewAD = this.LayoutInflater.Inflate(Resource.Layout.JobAlert, null);
             tv1 = viewAD.FindViewById<TextView>(Resource.Id.txtLoc);
             tv1.SetText("Stixwold Rd RA", TextView.BufferType.Normal);

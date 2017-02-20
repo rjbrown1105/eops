@@ -23,6 +23,26 @@
         </TableRow>
         <TableRow
             android:id="@+id/tableRow3">
+            <TextView
+                android:id="@+id/lblCallsign"
+                android:text="Callsign : "
+                android:textStyle="bold"
+                android:textSize="12pt" />
+            <TextView
+                android:id="@+id/txtCallsign"
+                android:text="RA051"
+                android:textSize="12pt"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/lblGroup"
+                android:text=" - Group : "
+                android:textSize="12pt"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txtGroup"
+                android:text="Mob2"
+                android:textStyle="bold"
+                android:textSize="12pt" />
         </TableRow>
     </TableLayout>
     <Button
